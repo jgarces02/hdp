@@ -51,7 +51,7 @@ void rWriteBase(SEXP result, BASE *base) {
   rWriteListElement(result,"classqq",rWriteQQVector(base->hh,base->numclass+1,base->maxclass,base->classqq));
   FreeHH(base->hh);
   R_Free(base->beta);
-  Free(base);
+  R_Free(base);
 }
 
 
